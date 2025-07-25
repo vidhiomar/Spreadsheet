@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+.custom-paginator {
+  background: #22243a;
+  border-radius: 0 0 12px 12px;
+  padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.custom-paginator .p-paginator-pages .p-paginator-page {
+  color: #fff;
+  background: transparent;
+  border: none;
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.custom-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: rgba(25, 118, 210, 0.15);
+  color: #1976d2;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.custom-paginator .p-paginator-element {
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  transition: color 0.2s;
+}
+
+/* Add 1px line spacing between DataTable rows */
+.p-datatable-tbody > tr:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.p-datatable-tbody > tr > td {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+
+
+
