@@ -2,8 +2,14 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   build: {
-    chunkSizeWarningLimit: 1600,
+    emptyOutDir: true,
     outDir: 'dist',
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      input: {
+        main: './index.html',
+      },
+    },
   },
   plugins: [
     tailwindcss(),
