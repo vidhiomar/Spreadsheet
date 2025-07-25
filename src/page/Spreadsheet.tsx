@@ -101,7 +101,6 @@ export default function ProductTable() {
                             let pageNum = page; // start from current page
                             let selectedCount = 0;
                             let localProducts = [...products];
-                            // Select from current page first
                             for (const row of localProducts) {
                                 if (!selected.has(row.id)) {
                                     selected.add(row.id);
@@ -109,7 +108,6 @@ export default function ProductTable() {
                                     if (selectedCount >= rowsToSelect) break;
                                 }
                             }
-                            // If more needed, fetch next pages
                             while (selectedCount < rowsToSelect) {
                                 pageNum++;
                                 const res = await fetch(`https://api.artic.edu/api/v1/artworks?page=${pageNum}`);
@@ -170,7 +168,7 @@ export default function ProductTable() {
                         setSelectedIds(newSelectedIds);
                     }}
                     dataKey="id"
-                    paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
+                    paginatorTemplate="PrevPageLink PageLinks NextPageLink "
                     paginatorClassName="custom-paginator"
                 >
                     <Column selectionMode="multiple" headerStyle={{ width: '3rem' }} />

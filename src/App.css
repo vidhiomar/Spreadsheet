@@ -40,7 +40,6 @@
   transition: color 0.2s;
 }
 
-/* Add 1px line spacing between DataTable rows */
 .p-datatable-tbody > tr:not(:last-child) {
   border-bottom: 1px solid #e0e0e0;
 }
