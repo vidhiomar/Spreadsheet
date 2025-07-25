@@ -13,7 +13,6 @@ body {
   font-weight: normal;
   background: var(--surface-ground);
   color: var(--text-color);
-  /* Remove padding for full-page */
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
